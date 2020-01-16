@@ -164,8 +164,10 @@ public class Movement : MonoBehaviour
     public int getHealth(){
         return hp;
     }
-
     public int getMaxHealth(){
         return maxHealth;
+    }
+    public Weapon getWeapon(){
+        return gun;
     }
 }
