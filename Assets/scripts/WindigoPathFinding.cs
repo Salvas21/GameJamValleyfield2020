@@ -12,7 +12,7 @@ public class WindigoPathFinding : MonoBehaviour
 
     private GameObject player;
     private Transform currentPoi = null;
-    private readonly Vector2[] pois = { new Vector2(-82, 30), new Vector2(29, 13), new Vector2(80, 21), new Vector2(18, 47), new Vector2(-5, 137)};
+    private readonly Vector2[] pois = { new Vector2(30, 14), new Vector2(81, 22), new Vector2(19, 48), new Vector2(-81, 31), new Vector2(-104, 36), new Vector2(-167, 43), new Vector2(-179, 128), new Vector2(-4, 138) };
     private float timeLostPlayer;
 
     // Start is called before the first frame update
@@ -26,7 +26,7 @@ public class WindigoPathFinding : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(currentPoi != null)
+        //if(currentPoi != null)
 //            Debug.Log(currentPoi.position);
 
         if(player != null &&DistanceToOther(player) < maxDistance)
