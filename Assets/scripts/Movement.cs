@@ -40,15 +40,13 @@ public class Movement : MonoBehaviour
             Debug.LogError("DeathScene not set!!");
         }
         molotovManager = new MolotovManager(molotov);
-        //animator = GetComponentInChildren<Animator>();
+        animator = GetComponentInChildren<Animator>();
     }
 
-    void Update()
-    {
+    void Update(){
         handleInput();
         updateRotation();
-        if (hp <= 0)
-        {
+        if (hp <= 0){
             SceneManager.LoadScene(deathSceneName, LoadSceneMode.Single);
         }
     }
@@ -78,10 +76,8 @@ public class Movement : MonoBehaviour
         handleOffensiveCtrks();
     }
 
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.tag == "Ennemi")
-        {
+    void OnCollisionEnter2D(Collision2D other){
+        if (other.gameObject.tag == "Ennemi"){
             takeDamage();
         }
         else if (other.gameObject.tag == "Molotov")
@@ -137,7 +133,7 @@ public class Movement : MonoBehaviour
         {
             rb.AddForce(new Vector3(0f, movementSpeed * -1, 0f) * Time.deltaTime);
         }
-        //animator.SetBool("isMoving", (rb.velocity != Vector2.zero));
+        animator.SetBool("isMoving", (rb.velocity != Vector2.zero));
         rb.velocity = Vector3.zero;
     }
 
@@ -163,5 +159,13 @@ public class Movement : MonoBehaviour
         {
             molotovManager.throwMol(transform.position, character.transform.rotation);
         }
+    }
+
+    public int getHealth(){
+        return hp;
+    }
+
+    public int getMaxHealth(){
+        return maxHealth;
     }
 }
