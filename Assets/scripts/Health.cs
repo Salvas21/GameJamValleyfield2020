@@ -27,6 +27,7 @@ public class Health : MonoBehaviour
 
     public void Update()
     {
+        health = movement.getHealth();
         if (health > numOfHearts) {
             health = numOfHearts;
         }
