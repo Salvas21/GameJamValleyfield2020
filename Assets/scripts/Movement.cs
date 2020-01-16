@@ -114,7 +114,7 @@ public class Movement : MonoBehaviour
     }
     public void takeDamage()
     {
-        hp--;
+        //hp--;
     }
 
     private void handleMoveCtrls()
