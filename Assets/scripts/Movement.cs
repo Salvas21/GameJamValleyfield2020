@@ -133,7 +133,8 @@ public class Movement : MonoBehaviour
         {
             rb.AddForce(new Vector3(0f, movementSpeed * -1, 0f) * Time.deltaTime);
         }
-        animator.SetBool("isMoving", (rb.velocity != Vector2.zero));
+        animator.SetBool("IsMoving", (rb.velocity != Vector2.zero));
+        
         rb.velocity = Vector3.zero;
     }
 
