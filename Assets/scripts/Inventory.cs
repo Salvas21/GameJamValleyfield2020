@@ -9,11 +9,9 @@ public class Inventory : MonoBehaviour
         private Movement movement;
         public TextMeshProUGUI numberBullets;
         public TextMeshProUGUI numberMolotov;
-    
-        private int numberOfMolotov;
-        private int numberOfKeys;
-    
-        private bool lanter;
+        public TextMeshProUGUI numberOfKeys;
+        public TextMeshProUGUI lanternOrNot;
+   
         // Start is called before the first frame update
         void Start()
         {
@@ -26,7 +24,7 @@ public class Inventory : MonoBehaviour
         // Update is called once per frame
         void Update()
         {
-            numberBullets.text = movement.getWeapon().totalAmmo.ToString();
-            numberMolotov.text = movement.getWeapon().totalGoldBullets.ToString();
+            numberBullets.text = "x " + movement.getWeapon().totalAmmo;
+            //numberMolotov.text = movement.getWeapon().totalGoldBullets.ToString();
         }
 }
