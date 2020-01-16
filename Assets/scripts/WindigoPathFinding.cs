@@ -41,9 +41,9 @@ public class WindigoPathFinding : MonoBehaviour
                 //Debug.Log("Lost player time");
                 if (currentPoi == null)
                 {
-                    Debug.Log("New poi: ");
+                    //Debug.Log("New poi: ");
                     currentPoi = RandomPoi();
-                    Debug.Log(currentPoi.position);
+                    //Debug.Log(currentPoi.position);
                     destination.target = currentPoi;
                 } else if(ArrivedAtPoi(currentPoi)) {
                     //Debug.Log("Arrived at poi");
