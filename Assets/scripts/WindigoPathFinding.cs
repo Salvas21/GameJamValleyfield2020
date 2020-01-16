@@ -20,16 +20,16 @@ public class WindigoPathFinding : MonoBehaviour
     {
         poiTargetObject = new GameObject("Poi");
         timeLostPlayer = Time.realtimeSinceStartup;
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
         if(currentPoi != null)
-            Debug.Log(currentPoi.position);
+//            Debug.Log(currentPoi.position);
 
-        player = GameObject.Find("Player");
-        if(DistanceToOther(player) < maxDistance)
+        if(player != null &&DistanceToOther(player) < maxDistance)
         {
             destination.target = player.transform;
             timeLostPlayer = Time.realtimeSinceStartup;
