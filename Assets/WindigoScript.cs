@@ -11,7 +11,6 @@ public class WindigoScript : MonoBehaviour{
     private float timeStopStun;
 
     void OnTriggerEnter2D(Collider2D other){
-        Debug.Log(other.gameObject.tag);
         if(other.gameObject.tag == "BulletHit"){
             aiPath.speed = 0;
             timeStopStun = Time.time + stunTime;
